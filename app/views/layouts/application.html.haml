@@ -15,10 +15,12 @@
           %a.brand{:href => "#"} Avolcov 
           .nav-collapse
             %ul.nav
-            %ul.nav.pull-right
               %li= link_to "About me", about_path
               %li= link_to "Projects", projects_path
               %li= link_to "Contacts", contacts_path
+            %ul.nav.pull-right
+
+              %li= link_to locale_switch, url_for(locale: locale_switch) 
     .container
       .row
         #flash_errors.text-error
@@ -26,4 +28,5 @@
           = content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert]
         %div
           = yield
+    = copyright
 
