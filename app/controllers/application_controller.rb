@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
     logger.info session[:locale]
     logger.info "*"*80
 
-    session[:locale] = I18n.default_locale
+    session[:locale] ||= I18n.default_locale
     I18n.locale = session[:locale]
   end
 

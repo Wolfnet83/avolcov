@@ -5,28 +5,27 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    .navbar.navbar-inverse.navbar-static-top
-      .navbar-inner
-        .container
-          %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.brand{:href => "#"} Avolcov 
-          .nav-collapse
-            %ul.nav
-              %li= link_to "About me", about_path
-              %li= link_to "Projects", projects_path
-              %li= link_to "Contacts", contacts_path
-            %ul.nav.pull-right
-
-              %li= link_to locale_switch, url_for(locale: locale_switch) 
+    .navbar.navbar-default
+      .container
+        %button.navbar-toggle{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{:href => "#"} Avolcov 
+        .collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li= link_to t('navbar.about'), about_path
+            %li= link_to t('navbar.projects'), projects_path
+            %li= link_to t('navbar.contacts'), contacts_path
+          %ul.nav.navbar-nav.navbar-right
+            %li= link_to locale_switch, url_for(locale: locale_switch) 
     .container
       .row
         #flash_errors.text-error
           = content_tag(:div, flash[:error], :id => "flash_error") if flash[:error]
           = content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert]
-        %div
+      .row
+        .com-md-8.col-md-offset-1
           = yield
-    = copyright
+    -#= copyright
 

@@ -4,7 +4,8 @@
 My Own CV
 
 Rails 4
-No Database yet
+No Database yet/n
+2.0.0.p353
 
 /*This README would normally document whatever steps are necessary to get the*/
 /*application up and running.*/
@@ -12,7 +13,6 @@ No Database yet
 /*Things you may want to cover:*/
 
 /** Ruby version*/
-2.0.0.p353
 
 /** System dependencies*/
 

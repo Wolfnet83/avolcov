@@ -31,7 +31,7 @@ gem 'rspec-rails'
 gem 'haml-rails'
 
 gem 'less-rails'
-gem 'twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails', :git => 'https://github.com/seyhunak/twitter-bootstrap-rails.git', :branch => 'bootstrap3'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
